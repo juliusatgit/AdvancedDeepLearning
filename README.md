@@ -1,1 +1,3 @@
-Lecture D7047E - Advanced Deep Learning
+# Lecture D7047E - Advanced Deep Learning
+
+## References

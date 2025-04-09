@@ -24,15 +24,17 @@ def preprocess_pandas(data, columns):
     data['Sentence'] = data['Sentence'].replace('((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)(\.|$)){4}', '', regex=True)    # remove IP address
     data['Sentence'] = data['Sentence'].str.replace('[^\w\s]','')                                                       # remove special characters
     data['Sentence'] = data['Sentence'].replace('\d', '', regex=True)                                                   # remove numbers
-    for index, row in data.iterrows():
-        word_tokens = word_tokenize(row['Sentence'])
-        filtered_sent = [w for w in word_tokens if not w in stopwords.words('english')]
-        df_.loc[len(df_)] = {
-            "index": row['index'],
-            "Class": row['Class'],
-            "Sentence": " ".join(filtered_sent)
-        }
+    # for index, row in data.iterrows():
+    #     word_tokens = word_tokenize(row['Sentence'])
+    #     filtered_sent = [w for w in word_tokens if not w in stopwords.words('english')]
+    #     df_.loc[len(df_)] = {
+    #         "index": row['index'],
+    #         "Class": row['Class'],
+    #         "Sentence": " ".join(filtered_sent)
+    #     }
+    #return df_
     return data
+
 
 # If this is the primary file that is executed (ie not an import of another file)
 if __name__ == "__main__":

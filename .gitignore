@@ -18,7 +18,7 @@ venv/
 *.pt
 
 # Text data files
-#*.txt
+*.txt
 *.csv
 *.tsv
 

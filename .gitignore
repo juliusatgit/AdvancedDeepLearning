@@ -22,6 +22,9 @@ venv/
 *.csv
 *.tsv
 
+# Permit requirements.txt
+!requirements.txt
+
 # Logs and temp files
 *.log
 *.tmp

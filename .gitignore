@@ -21,6 +21,7 @@ venv/
 *.txt
 *.csv
 *.tsv
+*.json.gz
 
 # Permit requirements.txt
 !requirements.txt
